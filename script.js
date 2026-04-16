@@ -31,10 +31,11 @@ function initLevel() {
 }
 
 async function checkSynonym(word, target) {
+    if (word.toLowerCase() === target.toLowerCase()) return false; // Prevent cheating by typing the word itself
     try {
-        const response = await fetch(`https://api.datamuse.com/words?rel_syn=${word}`);
+        const response = await fetch(`https://api.datamuse.com/words?ml=${target}`);
         const data = await response.json();
-        return data.some(item => item.word.toLowerCase() === target.toLowerCase());
+        return data.some(item => item.word.toLowerCase() === word.toLowerCase());
     } catch (error) {
         console.error('API Error:', error);
         return false;
