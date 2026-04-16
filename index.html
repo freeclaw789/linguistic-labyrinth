@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>Linguistic Labyrinth</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div id="game-container">
+        <header>
+            <h1>Linguistic Labyrinth</h1>
+            <div id="level-display">Level: <span id="current-level">1</span></div>
+        </header>
+
+        <div id="board"></div>
+
+        <div id="controls">
+            <input type="text" id="word-input" placeholder="Enter a synonym..." autocomplete="off">
+            <button id="submit-btn">Move</button>
+        </div>
+
+        <div id="message">Find a synonym of the target word to move!</div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
