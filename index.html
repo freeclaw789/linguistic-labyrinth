@@ -3,25 +3,28 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
-    <title>Linguistic Labyrinth</title>
+    <title>Linguistic Labyrinth: Rush</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <div id="game-container">
-        <header>
-            <h1>Linguistic Labyrinth</h1>
-            <div id="level-display">Level: <span id="current-level">1</span></div>
-        </header>
-
-        <div id="board"></div>
-
-        <div id="controls">
-            <input type="text" id="word-input" placeholder="Enter a synonym..." autocomplete="off">
-            <button id="submit-btn">Move</button>
+    <div id="ui-layer">
+        <div id="stats">
+            <span>Level: <span id="level-val">1</span></span>
+            <span>Score: <span id="score-val">0</span></span>
         </div>
-
-        <div id="message">Find a synonym of the target word to move!</div>
+        <div id="target-container">
+            Find a synonym for:<br>
+            <strong id="target-word">...</strong>
+        </div>
     </div>
+
+    <div id="overlay">
+        <h1 id="overlay-title">Linguistic Labyrinth</h1>
+        <p id="overlay-desc">Collect the synonyms. Avoid the noise.</p>
+        <button id="start-btn">Start Run</button>
+    </div>
+
+    <canvas id="gameCanvas"></canvas>
     <script src="script.js"></script>
 </body>
 </html>
